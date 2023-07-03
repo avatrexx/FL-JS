@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FaceLiveness Importing SDK</title>
+    <script src="index.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>FaceLiveness Importing SDK</h1>
+    <div id="sdk-container"></div>
+    <button id="open-sdk-button">Open SDK</button>
+    <script>
+      const sdk = window['FacesSDK'];
+      const options = {
+        permissionButton: {
+          label: 'Permitir',
+          color: '#F9F9F9',
+          backgroundColor: '#39C560',
+          borderRadius: '10px',
+          border: '1px solid'
+        },
+        startButton: {
+          label: 'Escanear rosto',
+          color: '#F9F9F9',
+          backgroundColor: 'blue',
+          borderRadius: '0.25rem',
+          border: '1px solid #2D994B'
+        }
+      } 
+
+  
+      const token = "";
+      const useFaceAuthenticator = false;
+      const sdkContainer = 'sdk-container';
+      const personId = ''
+      async function initSdk() {
+        await navigator.mediaDevices.getUserMedia({ video: true });
+        const facesSdk = await sdk.initializeSdk(token, sdkContainer, useFaceAuthenticator, personId, options);
+        document.getElementById('open-sdk-button').addEventListener('click', () => {
+          facesSdk.execute(personId);
+        });
+      }git push origin master
+ 
+
+      initSdk();
+    </script>
+  </body>
+</html>
