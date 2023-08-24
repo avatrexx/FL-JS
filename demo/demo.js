@@ -1,5 +1,8 @@
 const options = {
     environment: 'prod',
+    settings: {
+        filter: 'clear'
+},
     permissionButton: {
       label: 'Permitir',
       color: '#F9F9F9',
