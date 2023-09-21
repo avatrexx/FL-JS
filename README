@@ -2,6 +2,8 @@ Token JWT needed for the SDK to work
 
 For importing the SDK, go to https://docs.caf.io/sdks/web-javascript/getting-started and download the new version of the FaceLiveness, import the file into the same directory of the project and be happy :)
 
-"npm i" in server.js directory to run a server
+"npm i" in server.js directory to install dependencies
+
+Run the server on node server.js
 
 Open the page on localhost:3000
