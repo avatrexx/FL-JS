@@ -24,8 +24,9 @@ async function init() {
         },
       },
     })
-
+    
     await server.start()
+    console.log("Server Online at localhost:3000")
 }
 
 init();
